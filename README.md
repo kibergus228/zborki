@@ -7,6 +7,9 @@
     <link rel="stylesheet" type="text/css" href="stail.css">
 </head>
 <body>
+    <stail>
+        
+    </stail>
     <div class="container">
         <div class="card">
             <img src="./завантаження (2).jpg" alt="Winter Forest">
