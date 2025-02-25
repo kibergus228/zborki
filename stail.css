@@ -1,5 +1,5 @@
 body {
-    background-image: url('./фон для сайта в темних колорах з квадратами, які заповнюють весь екран (1).png');
+    background-image: url('./фон\ для\ сайта\ в\ темних\ колорах\ з\ квадратами\,\ які\ заповнюють\ весь\ екран\ \(1\).png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -8,13 +8,11 @@ body {
     height: 100vh;
     margin: 0;
 }
-
 .container {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
-
 .card {
     width: 250px;
     padding: 20px;
@@ -23,13 +21,11 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
-
 .card img {
     width: 100%;
     border-radius: 4px;
     margin-bottom: 10px;
 }
-
 .btn {
     background-color: #007BFF;
     color: white;
@@ -37,6 +33,9 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+.btn:hover {
+    background-color: #0056b3;
 }
 
 .btn:hover {
