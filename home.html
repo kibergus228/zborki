@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт за макетом</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+        .menu {
+            display: flex;
+            justify-content: center; /* Вирівнює кнопку по центру */
+            align-items: center;
+            background: black;
+            padding: 10px 20px;
+            color: white;
+            position: relative; /* Дозволяє розмістити додаткові елементи */
+        }
+        .menu img {
+            height: 40px;
+            position: absolute;
+            left: 20px; /* Фіксує логотип зліва */
+        }
+        .menu .right {
+            font-size: 14px;
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            right: 20px; /* Розміщує "Майн" і "Новини" справа */
+        }
+        .center-btn {
+            font-size: 20px;
+            background: white;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 500px;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            align-items: flex-start;
+        }
+        .left img {
+            width: 350px;
+            margin-top: -20px;
+        }
+        .cards {
+            display: flex;
+            gap: 20px;
+        }
+        .card {
+            width: 450px;
+            height: 550px;
+            background: gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+        .icon {
+            font-size: 30px;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+       
+        <a href="otherpage.html" class="center-btn">Зборки</a>
+        <div class="right">
+            <span>Майн</span>
+            <span>Новини</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left">
+            <img src="./photo_2025-02-26_09-58-37.jpg" alt="Зображення">
+        </div>
+        <div class="cards">
+            <div class="card">Я вже все знаю</div>
+            <div class="card">Я нічого не знаю</div>
+        </div>
+        <div class="icon"></div>
+    </div>
+
+</body>
+</html>
+
+
