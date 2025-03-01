@@ -23,6 +23,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    transition: transform 0.3s;
 }
 
 .card img {
@@ -51,6 +52,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    transition: transform 0.3s;
 }
 
 .card2 img {
@@ -79,6 +81,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    transition: transform 0.3s;
 }
 
 .card3 img {
@@ -94,16 +97,19 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+  
 }
 
 .btn3:hover {
     background-color: #199400;
 }
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
         align-items: center;
     }
 }
+
 
 
