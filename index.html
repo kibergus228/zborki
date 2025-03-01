@@ -16,24 +16,24 @@
         }
         .menu {
             display: flex;
-            justify-content: center; /* Вирівнює кнопку по центру */
+            justify-content: center;
             align-items: center;
             background: black;
             padding: 10px 20px;
             color: white;
-            position: relative; /* Дозволяє розмістити додаткові елементи */
+            position: relative;
         }
         .menu img {
             height: 40px;
             position: absolute;
-            left: 20px; /* Фіксує логотип зліва */
+            left: 20px;
         }
         .menu .right {
             font-size: 14px;
             display: flex;
             gap: 10px;
             position: absolute;
-            right: 20px; /* Розміщує "Майн" і "Новини" справа */
+            right: 20px;
         }
         .center-btn {
             font-size: 20px;
@@ -46,56 +46,78 @@
         }
         .container {
             display: flex;
-            justify-content: space-between;
+            align-items: center;
+            justify-content: center;
             padding: 20px;
-            align-items: flex-start;
+            gap: 20px;
+            position: relative;
+        }
+        .left {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 400px;
+            text-align: center;
         }
         .left img {
-            width: 350px;
-            margin-top: -20px;
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+        }
+        .left p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
         }
         .cards {
             display: flex;
             gap: 20px;
+            justify-content: center;
+            align-items: center;
+            position: relative;
         }
-        .card {
-            width: 450px;
-            height: 550px;
-            background: gray;
+        .card-btn {
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 450px;
+            height: 550px;
+            background: gray;
             color: white;
             font-size: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 100px;
         }
-        .icon {
-            font-size: 30px;
-            margin-top: 80px;
+        .nu {
+            color: hsl(0, 0%, 100%);
+            text-decoration: none;
+        }
+        .main {
+            color: #ffffff;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-
     <div class="menu">
-       
-        <a href="otherpage.html" class="center-btn">Зборки</a>
+        <a href="./index.html" class="center-btn">Зборки</a>
         <div class="right">
-            <span>Майн</span>
-            <span>Новини</span>
+            <a href="https://www.youtube.com/results?search_query=%D0%BC%D0%B0%D0%B9%D0%BD%D0%BA%D1%80%D0%B0%D1%84%D1%82" class="main">майнкрафт</a>
+            <a href="knowyourself.html" class="nu">Новини</a>
         </div>
     </div>
-
     <div class="container">
         <div class="left">
             <img src="./photo_2025-02-26_09-58-37.jpg" alt="Зображення">
+            <p>+380684694632</p>
         </div>
         <div class="cards">
-            <div class="card">Я вже все знаю</div>
-            <div class="card">Я нічого не знаю</div>
+            <a href="./index.html" class="card-btn">Я вже все знаю</a>
+            <a href="https://www.youtube.com/results?search_query=%D0%BC%D0%B0%D0%B9%D0%BD%D0%BA%D1%80%D0%B0%D1%84%D1%82" class="card-btn">Я нічого не знаю</a>
         </div>
-        <div class="icon"></div>
     </div>
-
 </body>
 </html>
 
