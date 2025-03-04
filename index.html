@@ -31,12 +31,12 @@
             right: 20px;
         }
         .center-btn {
-            font-size: 20px;
+            font-size: 2vw;
             background: white;
             color: black;
-            padding: 10px 20px;
+            padding: 1vw 2vw;
             text-decoration: none;
-            border-radius: 500px;
+            border-radius: 50px;
             font-weight: bold;
             transition: transform 0.3s;
         }
@@ -50,13 +50,11 @@
             padding: 20px;
             gap: 20px;
             position: relative;
+            flex-wrap: wrap;
         }
         .left {
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 400px;
+            position: relative;
+            width: 30%;
             text-align: center;
         }
         .left img {
@@ -66,7 +64,7 @@
         }
         .left p {
             margin-top: 10px;
-            font-size: 16px;
+            font-size: 1.2vw;
             color: #333;
         }
         .cards {
@@ -74,21 +72,21 @@
             gap: 20px;
             justify-content: center;
             align-items: center;
-            position: relative;
+            flex-wrap: wrap;
         }
         .card-btn {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 450px;
-            height: 550px;
+            width: 30vw;
+            height: 40vw;
             background: gray;
             color: white;
-            font-size: 20px;
+            font-size: 2vw;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 100px;
+            border-radius: 50px;
             transition: transform 0.3s;
             text-align: center;
             padding: 20px;
@@ -105,9 +103,9 @@
         .round-btn {
             position: fixed;
             bottom: 20px;
-            right: 20px;
-            width: 70px;
-            height: 70px;
+            right: 5px;
+            width: 5vw;
+            height: 5vw;
             background: white;
             border-radius: 50%;
             display: flex;
@@ -117,19 +115,37 @@
             transition: transform 0.3s;
         }
         .round-btn img {
-            width: 50px;
-            height: 50px;
+            width: 80%;
+            height: 80%;
         }
         .round-btn:hover {
             transform: scale(1.1);
         }
         .nu{
-            color: aliceblue;
+            color:white;
             text-decoration: none;
         }
         .main{
-            color: aliceblue;
+            color:white;
             text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .left {
+                width: 100%;
+            }
+            .card-btn {
+                width: 90%;
+                height: auto;
+                font-size: 4vw;
+            }
+            .round-btn {
+                width: 5px;
+                height: 5px;
+            }
+            .left p {
+                font-size: 3vw;
+            }
         }
     </style>
 </head>
@@ -137,16 +153,10 @@
     <div class="menu">
         <a href="https://kibergus228.github.io/zborki/zborki.html" class="center-btn">Зборки</a>
         <div class="right">
-            <a href="https://www.youtube.com/results?search_query=%D0%BC%D0%B0%D0%B9%D0%BD%D0%BA%D1%80%D0%B0%D1%84%D1%82" class="main">майнкрафт</a>
-            <a href="knowyourself.html" class="nu">Новини</a>
+            <a href="https://www.youtube.com/results?search_query=%D0%BC%D0%B0%D0%B9%D0%BD%D0%BA%D1%80%D0%B0%D1%84%D1%82" class="main">Майнкрафт</a>
+            <a href="https://www.youtube.com/results?search_query=%D0%BC%D0%B0%D0%B9%D0%BD%D0%BA%D1%80%D0%B0%D1%84%D1%82" class="nu">Новини</a>
         </div>
     </div>
-    <div class="container">
-        <div class="left">
-            <img src="./photo_2025-02-26_09-58-37.jpg" alt="Зображення">
-            <p>+380684694632  
-              roman09derk@gmail.com</p>
-        </div>
         <div class="cards">
             <a href="https://kibergus228.github.io/zborki/zborki.html" class="card-btn">
                 <img src="image1.jpg">
@@ -158,11 +168,17 @@
             </a>
         </div>
     </div>
-    <a href="https://your-link.com" class="round-btn">
+    <a href="#" class="round-btn">
         <img src="icon.png">
     </a>
+    <div class="container">
+        <div class="left">
+            <img src="photo_2025-02-26_09-58-37.jpg" alt="Зображення">
+            <p>+380684694632  roman09derk@gmail.com</p>
+        </div>
 </body>
 </html>
+
 
 
 
