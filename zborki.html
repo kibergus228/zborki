@@ -6,6 +6,119 @@
     <title>Centered Cards</title>
     <link rel="stylesheet" type="text/css" href="stail.css">
         <style>
+            * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('фон для сайта в темних колорах з квадратами, які заповнюють весь екран (1).png'); /* Замініть на ваш правильний шлях */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    transition: transform 0.3s;
+}
+
+.card, .card2, .card3 {
+    overflow: hidden;
+    width: 250px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card {
+    background-color: rgba(132, 0, 255, 0.8);
+}
+
+.card2 {
+    background-color: rgba(255, 166, 0, 0.8);
+}
+
+.card3 {
+    background-color: rgba(2, 129, 13, 0.8);
+}
+
+.card img, .card2 img, .card3 img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.btn, .btn2, .btn3 {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    color: rgb(0, 0, 0);
+}
+
+.btn {
+    background-color: #8037bd;
+}
+
+.btn2 {
+    background-color: #ffc400;
+}
+
+.btn3 {
+    background-color: #199400;
+}
+
+.card:hover, .card2:hover, .card3:hover {
+    transform: scale(1.05);
+}
+
+.container:hover, .btn:hover, .btn2:hover, .btn3:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card, .card2, .card3 {
+        width: 90%;
+    }
+    .oval-btn{
+        width: 90%;
+    }
+}
+
+.oval-btn {
+    transform: scale(1.1);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #3c3f42;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s;
+}
+
+.oval-btn:hover {
+    background: #5a5d60;
+}
              .oval-btn {
             position: absolute;
             top: 10px;
