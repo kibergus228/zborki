@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="zborki" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт за макетом</title>
     <style>
         * {
@@ -12,7 +12,7 @@
         }
         body {
             font-family: Arial, sans-serif;
-            background: url(темний\ фон\ для\ сайта.png)
+            background: url(/css/темний\ фон\ для\ сайта.png)
         }
         .menu {
             display: flex;
@@ -123,16 +123,35 @@
         .round-btn:hover {
             transform: scale(1.1);
         }
-        .nu{
-            color:white;
-            text-decoration: none;
+        .menu .right {
+            font-size: 14px;
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            right: 20px;
         }
-        .main{
-            color:white;
+        .main, .nu {
+            color: white;
             text-decoration: none;
+            transition: transform 0.3s;
+        }
+        .main:hover, .nu:hover {
+            transform: scale(1.1);
+        }
+        
+        .q{
+            color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scale(1.1);
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 768px)
+         {
+            .nu{
+                width: 100%;
+            }
             .left {
                 width: 100%;
             }
@@ -156,8 +175,11 @@
         <a href="https://kibergus228.github.io/zborki/zborki.html" class="center-btn">Зборки</a>
         <div class="right">
             <a href="https://www.youtube.com/results?search_query=%D0%BC%D0%B0%D0%B9%D0%BD%D0%BA%D1%80%D0%B0%D1%84%D1%82" class="main">Майнкрафт</a>
-           <a href="https://kibergus228.github.io/zborki/nu.html" class="nu">Новини</a>
+            <a href="https://kibergus228.github.io/zborki/nu.html" class="nu">Новини</a>
         </div>
+    </div>
+    <div class="q">
+    <p>ти знаєш що таке майнкрафт?</p>
     </div>
         <div class="cards">
             <a href="https://kibergus228.github.io/zborki/zborki.html" class="card-btn">
@@ -170,13 +192,13 @@
             </a>
         </div>
     </div>
-    <a href="https://kibergus228.github.io/zborki/zvazok.html" class="round-btn">
+    <a href="#" class="round-btn">
         <img src="free-icon-font-comment-heart-5068740.svg">
     </a>
     <div class="container">
         <div class="left">
-            
-            <p> </p>
+            <img src="" >
+            <p></p>
         </div>
 </body>
 </html>
