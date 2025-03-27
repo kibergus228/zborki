@@ -134,13 +134,39 @@ body {
         .oval-btn:hover {
             background: #3c3f42;
         }
+        .color-select{
+            background-color: #3c3f42;
+            position: absolute;
+            top: 10px;
+            left: 1250px;
+            border: none;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
-    <a href="https://kibergus228.github.io/zborki/">
-        <button class="oval-btn">Меню
-        </button>
-    </a>
+    <select class="color-select" onchange="changeColor()">
+        <option value="#ffffff" data-image="url('white.jpg')">Білий</option>
+        <option value="#000000" data-image="url('black.jpg')">Чорний</option>
+        <option value="#ff0000" data-image="url('red.jpg')">Червоний</option>
+        <option value="#00ff00" data-image="url('green.jpg')">Зелений</option>
+        <option value="#0000ff" data-image="url('blue.jpg')">Синій</option>
+    </select>
+    
+    <script>
+        function changeColor() {
+            const select = document.querySelector('.color-select');
+            const selectedOption = select.options[select.selectedIndex];
+            const selectedColor = selectedOption.value;
+            const selectedImage = selectedOption.getAttribute('data-image');
+            document.body.style.backgroundColor = selectedColor;
+            document.body.style.backgroundImage = selectedImage;
+        }
+    </script>
+        <a href="https://kibergus228.github.io/zborki/">
+            <button class="oval-btn">Меню
+            </button>
+        </a>
     <div class="container">
         <div class="card">
             <img src="./магія в стилі майнкрафт з великою кількість фіолетового з чаклунов стояшім в крутій позі і в темних окулярах (1).png" alt="Winter Forest">
@@ -163,7 +189,6 @@ body {
                 </a>
             </div>
         </div>
-        
         <div class="card3">
             <img src="./openart-image_Pxl8rQbg_1740499962026_raw.jpg" alt="Winter Forest">
             <div class="info">
@@ -175,5 +200,7 @@ body {
             </div>
         </div>
     </div>
+</body>
+</html>
 </body>
 </html>
