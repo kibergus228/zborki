@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="zborki" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Новини</title>
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -14,9 +14,7 @@
         .news-item p { color: #fffefe; }
         .news-item a { display: inline-block; margin-top: 10px; color: #007bff; text-decoration: none; }
         .news-item a:hover { text-decoration: underline; }
-    </style>
-            <style>
-                .oval-btn {
+        .oval-btn {
                position: absolute;
                top: 10px;
                left: 10px;
@@ -28,8 +26,11 @@
                cursor: pointer;
                font-size: 16px;
            }
-           .oval-btn:hover {
+        .oval-btn:hover {
                background: #3c3f42;
+           }
+           .m{
+            color:rgb(175, 175, 175);
            }
        </style>
 </head>
@@ -39,24 +40,25 @@
         </button>
     </a>
     <header>
-        Останні новини
+        Останні новини сайту
     </header>
     <div class="container">
         <div class="news-item">
             <h2>23 березня</h2>
-            <p>з'явилася кнопка відгуків (якщо маєте ідей для поліпшення сайту пешіть на електрону пошту)</p>
-            
-            </div>
-        
+            <p>з'явилася кнопка відгуків (якщо маєте ідей для поліпшення сайту пешіть на електрону пошту) 
+                <p><a class="m" href="mailto:matviumotok@gmail.com">matviumotok@gmail.com</a></p>        
+            </div></p>
+      
+       
         <div class="news-item">
             <h2>28грудня-23 березня</h2>
             <p>виправлення багів, портування на мобільні пристрой, і невеликі зміни в стилі</p>
-      </div>
-        
+    
+        </div>
         <div class="news-item">
             <h2>28 грудня</h2>
             <p>зявилася голвне меню</p>
-    
+  
         </div>
         <div class="news-item">
             <h2>27 грудня</h2>
@@ -66,5 +68,3 @@
     </div>
 </body>
 </html>
-
-
