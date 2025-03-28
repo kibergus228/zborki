@@ -3,58 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>відгуки</title>
+    <title>Відгуки</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            background: url('./темний\ фон\ для\ сайта\ \(2\).png') center fixed;
+           
             background-size: cover;
             font-family: Arial, sans-serif;
             color: rgb(0, 0, 0);
             text-align: center;
         }
 
-        .m{
+        .m {
             transition: transform 0.3s;
             color: rgb(175, 175, 175);
             text-decoration: none;
         }
+
         .header {
             text-decoration: none;
             background: linear-gradient(500deg, #000000, #ffffff);
             padding: 20px;
             font-size: 24px;
             font-weight: bold;
+            position: relative;
+            z-index: 1;
         }
+
         .content {
             margin-top: 50px;
             font-size: 20px;
         }
-                .oval-btn {
-               position: absolute;
-               top: 10px;
-               left: 10px;
-               background: #686868;
-               color: rgb(167, 166, 166);
-               border: none;
-               padding: 10px 20px;
-               border-radius: 30px;
-               cursor: pointer;
-               font-size: 16px;
-           }
-           .oval-btn:hover {
-               background: #3c3f42;
-           }
- 
+
+        .oval-btn {
+            position: absolute;
+            top: 70px;
+            left: 10px;
+            background: #686868;
+            color: rgb(167, 166, 166);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 10;
+        }
+
+        .oval-btn:hover {
+            background: #3c3f42;
+        }
+
+        .color-select {
+            position: absolute;
+            top: 70px;
+            right: 10px;
+            background-color: #3c3f42;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            z-index: 10;
+        }
     </style>
 </head>
 <body>
     <a href="https://kibergus228.github.io/zborki/">
-        <button class="oval-btn">Меню
-        </button>
+        <button class="oval-btn">Меню</button>
     </a>
-    <div class="header">привіт якщо маєш пропозицію по поліпшеню сайта або знайшов помилку на сайті то пиши за нище вказаним емейлом</div>
+
+    <select class="color-select" onchange="changeColor()">
+        <option value="" data-image="url('./мінімальний\ білийфон\ для\ сайта.png')">Білий</option>
+        <option value="" data-image="url('./темний\ фон\ для\ сайта.png')">Чорний</option>
+        <option value="" data-image="url('./червоний\ фон\ для\ сайта.png')">Червоний</option>
+        <option value="" data-image="url('./мінімальний\ зелений\ фон\ для\ сайта.png')">Зелений</option>
+        <option value="" data-image="url('./мінімальний\ синій\ фон\ для\ сайта.png')">Синій</option>
+    </select>
+    
+    <script>
+        function changeColor() {
+            const select = document.querySelector('.color-select');
+            const selectedOption = select.options[select.selectedIndex];
+            const selectedColor = selectedOption.value;
+            const selectedImage = selectedOption.getAttribute('data-image');
+            document.body.style.backgroundColor = selectedColor;
+            document.body.style.backgroundImage = selectedImage;
+        }
+    </script>
+    
+    <div class="header">Привіт! Якщо маєш пропозицію щодо покращення сайту або знайшов помилку, то пиши на вказаний нижче email:</div>
+    
     <div class="content">
         <p><a class="m" href="mailto:matviumotok@gmail.com">matviumotok@gmail.com</a></p> 
     </div>
