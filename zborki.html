@@ -135,22 +135,37 @@ body {
             background: #3c3f42;
         }
         .color-select{
-            background-color: #3c3f42;
-            position: absolute;
+            position: fixed;
             top: 10px;
-            left: 1250px;
+            right: 10px;
+            background-color: #3c3f42;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
             border: none;
             font-size: 16px;
+            z-index: 10;
         }
+        .language-select{
+            position: fixed;
+            top: 10px;
+            right: 145px;
+            background-color: #3c3f42;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            z-index: 10;
+        }
+
     </style>
 </head>
 <body>
     <select class="color-select" onchange="changeColor()">
-        <option value="#ffffff" data-image="url('white.jpg')">Білий</option>
-        <option value="#000000" data-image="url('black.jpg')">Чорний</option>
-        <option value="#ff0000" data-image="url('red.jpg')">Червоний</option>
-        <option value="#00ff00" data-image="url('green.jpg')">Зелений</option>
-        <option value="#0000ff" data-image="url('blue.jpg')">Синій</option>
+        <option value="" data-image="url('./мінімальний\ білийфон\ для\ сайта.png')">Білий</option>
+        <option value="" data-image="url('./темний\ фон\ для\ сайта.png')">Чорний</option>
+        <option value="" data-image="url('./червоний\ фон\ для\ сайта.png')">Червоний</option>
+        <option value="" data-image="url('./мінімальний\ зелений\ фон\ для\ сайта.png')">Зелений</option>
+        <option value="" data-image="url('./мінімальний\ синій\ фон\ для\ сайта.png')">Синій</option>
     </select>
     
     <script>
@@ -163,6 +178,48 @@ body {
             document.body.style.backgroundImage = selectedImage;
         }
     </script>
+    <select class="language-select" onchange="changeLanguage()">
+        <option value="ua">Українська</option>
+        <option value="en">English</option>
+    </select>
+    
+    <script>
+        const translations = {
+            ua: {
+                menu: "Меню",
+                magic: "магічне вознесіння",
+                magic_desc: "Ти звичайний гравець у світі Майнкрафту. Ти жив спокійним життям, але в якийсь момент на цей світ почали нападати монстри. Тобі доведеться вивчати магію, щоб вижити в цьому жорстокому світі.",
+                automation: "автоматизація рутини",
+                automation_desc: "Ти жив, як усі інші гравці майнкрафт, але в якийсь момент усі люди зникли, залишивши після себе старі будівлі. Ти намагався виконувати всі справи сам, але зрозумів, що тобі доведеться автоматизувати своє існування.",
+                zombie: "зомбі-апокаліпсис",
+                zombie_desc: "Ти всього-на-всього слабка людина, яка не може дати відсіч монстрам, які все йдуть і йдуть на тебе. Чи виживеш ти в цьому світі?!",
+                download: "скачати"
+            },
+            en: {
+                menu: "Menu",
+                magic: "Magic Ascension",
+                magic_desc: "You are an ordinary player in the world of Minecraft. You lived a peaceful life, but at some point monsters began to attack this world. You will have to learn magic to survive in this cruel world.",
+                automation: "Routine Automation",
+                automation_desc: "You lived like all the other Minecraft players, but at some point all the people disappeared, leaving behind old buildings. You tried to do everything yourself, but realized that you would have to automate your existence.",
+                zombie: "Zombie Apocalypse",
+                zombie_desc: "You are just a weak person who can't fight off the monsters that keep coming and coming at you. Will you survive in this world?!",
+                download: "Download"
+            }
+        };
+    
+        function changeLanguage() {
+            const lang = document.querySelector('.language-select').value;
+            document.querySelector('.oval-btn').textContent = translations[lang].menu;
+            document.querySelector('.card h2').textContent = translations[lang].magic;
+            document.querySelector('.card p').textContent = translations[lang].magic_desc;
+            document.querySelector('.card2 h2').textContent = translations[lang].automation;
+            document.querySelector('.card2 p').textContent = translations[lang].automation_desc;
+            document.querySelector('.card3 h2').textContent = translations[lang].zombie;
+            document.querySelector('.card3 p').textContent = translations[lang].zombie_desc;
+            document.querySelectorAll('.btn, .btn2, .btn3').forEach((btn) => btn.textContent = translations[lang].download);
+        }
+    </script>
+    
         <a href="https://kibergus228.github.io/zborki/">
             <button class="oval-btn">Меню
             </button>
@@ -202,5 +259,4 @@ body {
     </div>
 </body>
 </html>
-</body>
-</html>
+
