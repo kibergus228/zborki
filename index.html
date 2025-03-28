@@ -168,9 +168,38 @@
                 font-size: 3vw;
             }
         }
+        .color-select {
+            position: fixed;
+            top: 10px;
+            right: 1200px;
+            background-color: #3c3f42;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            z-index: 10;
+        }
     </style>
 </head>
 <body>
+    <select class="color-select" onchange="changeColor()">
+        <option value="" data-image="url('./мінімальний\ білийфон\ для\ сайта.png')">Білий</option>
+        <option value="" data-image="url('./темний\ фон\ для\ сайта.png')">Чорний</option>
+        <option value="" data-image="url('./червоний\ фон\ для\ сайта.png')">Червоний</option>
+        <option value="" data-image="url('./мінімальний\ зелений\ фон\ для\ сайта.png')">Зелений</option>
+        <option value="" data-image="url('./мінімальний\ синій\ фон\ для\ сайта.png')">Синій</option>
+    </select>
+    
+    <script>
+        function changeColor() {
+            const select = document.querySelector('.color-select');
+            const selectedOption = select.options[select.selectedIndex];
+            const selectedColor = selectedOption.value;
+            const selectedImage = selectedOption.getAttribute('data-image');
+            document.body.style.backgroundColor = selectedColor;
+            document.body.style.backgroundImage = selectedImage;
+        }
+    </script>
     <div class="menu">
         <a href="https://kibergus228.github.io/zborki/zborki.html" class="center-btn">збірки</a>
         <div class="right">
