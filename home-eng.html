@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>збірки</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: url(./темний\ фон\ для\ сайта.png)
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+            padding: 10px 20px;
+            color: white;
+            position: relative;
+        }
+        .menu .right {
+            font-size: 14px;
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            right: 20px;
+        }
+        .center-btn {
+            font-size: 2vw;
+            background: white;
+            color: black;
+            padding: 1vw 2vw;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        .center-btn:hover {
+            transform: scale(1.1);
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+            position: relative;
+            flex-wrap: wrap;
+        }
+        .left {
+            position: relative;
+            width: 30%;
+            text-align: center;
+           
+        }
+        .left img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+        }
+        .left p {
+            margin-top: 10px;
+            font-size: 1.2vw;
+            color: #f3f3f3;
+        }
+        .cards {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .card-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 30vw;
+            height: 40vw;
+            background: rgb(58, 58, 58);
+            color: rgb(255, 255, 255);
+            font-size: 2vw;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: transform 0.3s;
+            text-align: center;
+            padding: 20px;
+        }
+        .card-btn img {
+            width: 80%;
+            height: auto;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+        .card-btn:hover {
+            transform: scale(1.05);
+        }
+        .round-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 5px;
+            width: 5vw;
+            height: 5vw;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .round-btn img {
+            width: 80%;
+            height: 80%;
+        }
+        .round-btn:hover {
+            transform: scale(1.1);
+        }
+        .menu .right {
+            font-size: 14px;
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            right: 20px;
+        }
+        .main, .nu {
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        .main:hover, .nu:hover {
+            transform: scale(1.1);
+        }
+        
+        .q{
+            color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px)
+         {
+            .nu{
+                width: 100%;
+            }
+            .left {
+                width: 100%;
+            }
+            .card-btn {
+                width: 90%;
+                height: auto;
+                font-size: 4vw;
+            }
+            .round-btn {
+                width: 5px;
+                height: 5px;
+            }
+            .left p {
+                font-size: 3vw;
+            }
+        }
+        .color-select {
+            position: fixed;
+            top: 10px;
+            right: 1200px;
+            background-color: #3c3f42;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            z-index: 10;
+        }
+        .left-top-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: white;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s;
+    z-index: 100;
+}
+.left-top-btn:hover {
+    transform: scale(1.1);
+}
+
+    </style>
+</head>
+<body>
+    <select class="color-select" onchange="changeColor()">
+        <option value="" data-image="url('./minimal\ white\ background\ for\ site.png')">White</option>
+        <option value="" data-image="url('./dark\ background\ for\ site.png')">Black</option>
+        <option value="" data-image="url('./red\ background\ for\ site.png')">Red</option>
+        <option value="" data-image="url('./minimal\ green\ background\ for\ site.png')">Green</option>
+        <option value="" data-image="url('./minimal\ blue\ background\ for\ site.png')">Blue</option>
+    </select>
+
+    <script>
+        function changeColor() {
+            const select = document.querySelector('.color-select');
+            const selectedOption = select.options[select.selectedIndex];
+            const selectedColor = selectedOption.value;
+            const selectedImage = selectedOption.getAttribute('data-image');
+            document.body.style.backgroundColor = selectedColor;
+            document.body.style.backgroundImage = selectedImage;
+        }
+    </script>
+
+    <div class="menu">
+        <a href="https://kibergus228.github.io/zborki/zborki.html" class="center-btn">Collections</a>
+        <div class="right">
+            <a href="https://en.wikipedia.org/wiki/Minecraft" class="main">Minecraft</a>
+            <a href="https://kibergus228.github.io/zborki/nu.html" class="nu">News</a>
+        </div>
+    </div>
+
+    <div class="q">
+        <p>Do you know what Minecraft is?</p>
+    </div>
+
+    <div class="cards">
+        <a href="https://kibergus228.github.io/zborki/zborki.html" class="card-btn">
+            <img src="./Minecraft in cyberpunk style.png">
+            I know what Minecraft is
+        </a>
+        <a href="https://en.wikipedia.org/wiki/Minecraft" class="card-btn">
+        <img src="./пейзаж в стилі майнкрафт.png">
+            I don't know anything about Minecraft
+        </a>
+    </div>
+
+    <a href="https://kibergus228.github.io/zborki/zvazok.html" class="round-btn">
+        <img src="free-icon-font-comment-heart-5068740.svg">
+    </a>
+
+    <a href="#" class="left-top-btn">Українська</a>
+
+    <div class="container">
+        <div class="left">
+            <img src="" >
+            <p></p>
+        </div>
+</body>
+</html>
