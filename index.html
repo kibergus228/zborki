@@ -169,17 +169,19 @@
             }
         }
         .color-select {
-            position: fixed;
-            top: 10px;
-            right: 1200px;
-            background-color: #3c3f42;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            font-size: 16px;
-            z-index: 10;
-        }
-                .left-top-btn {
+    position: fixed;
+    top: 12px;
+    left: 230px; /* трохи правіше від кнопки "рандом" */
+    background-color: #3c3f42;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    font-size: 14px;
+    z-index: 100;
+    border-radius: 10px;
+}
+
+        .left-top-btn {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -195,10 +197,66 @@
 .left-top-btn:hover {
     transform: scale(1.1);
 }
+  @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card, .card2, .card3 {
+        width: 90%;
+    }
+    .oval-btn2{
+        width: 90%;
+    }
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    padding: 20px 20px; /* більше висоти */
+    color: white;
+    position: relative;
+    height: 80px;
+}
+.center-btn {
+    font-size: 1.8vw;
+    background: white;
+    color: black;
+    padding: 0.8vw 1.6vw;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.3s;
+    position: relative;
+}
+.center-btn:hover {
+    transform: scale(1.1);
+}
+
+.zandom-btn {
+    position: fixed;
+    top: 12px;
+    left: 120px;
+    background: #ffffff;
+    color: #000000;
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 100;
+}
+.zandom-btn:hover {
+    transform: scale(1.2);
+}
 
     </style>
 </head>
 <body>
+    <button class="zandom-btn">рандом</button>
+
     <select class="color-select" onchange="changeColor()">
         <option value="" data-image="url('./мінімальний\ білийфон\ для\ сайта.png')">Білий</option>
         <option value="" data-image="url('./темний\ фон\ для\ сайта.png')">Чорний</option>
@@ -217,7 +275,8 @@
             document.body.style.backgroundImage = selectedImage;
         }
     </script>
-     <a href="https://kibergus228.github.io/zborki/" class="left-top-btn">english</a>
+
+    <a href="#" class="left-top-btn">english</a>
     <div class="menu">
         <a href="https://kibergus228.github.io/zborki/zborki.html" class="center-btn">збірки</a>
         <div class="right">
@@ -239,13 +298,15 @@
             </a>
         </div>
     </div>
-    <a href="https://kibergus228.github.io/zborki/home-eng.html" class="round-btn">
+    <a href="https://kibergus228.github.io/zborki/zvazok.html" class="round-btn">
         <img src="free-icon-font-comment-heart-5068740.svg">
     </a>
     <div class="container">
         <div class="left">
             <img src="" >
             <p></p>
+            
+
         </div>
 </body>
 </html>
